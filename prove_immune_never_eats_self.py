@@ -47,7 +47,7 @@ case("the work/customer world",
      {"full_name": "microsoft/autogen"}, True, "forbidden-owner")
 case("a mimic wearing the species' coat",
      {"full_name": "impostor/fake-rapp",
-      "description": "a rapp/1 BasicAgent brainstem clone with openrappter and rappid:@a/b"},
+      "description": "a rapp/1 BasicAgent brainstem clone with rappid:@a/b"},
      True, "mimic")
 
 # ── THIS dino's own body (owner = acme). is_self must be True. ───────────────
