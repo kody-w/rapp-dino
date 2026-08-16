@@ -17,7 +17,7 @@ Three principles, hardest first:
      never EATEN.
 
   2. NEVER EAT THE BODY. The organism's own repos (kody-w RAPP estate, the four
-     canon repos), the work/customer world (aibast, microsoft/*), and the
+     canon repos), the operator's configured private/work orgs, and the
      predator's own already-absorbed cells are self. Skip them.
 
   3. A MIMIC WEARING SELF'S COAT IS STILL NOT PREY. A foreign thing that
@@ -48,10 +48,10 @@ GRAIL_REPOS = (
     "kody-w/rapp-installer",   # the grail — brainstem.py of record rides its release train
     "kody-w/rapp-canary",      # the release-train staging of the grail
 )
-# Whole owners that are never prey (the work/customer world and Microsoft's distro).
+# Whole owners that are never prey. Operators add their own private/work orgs
+# in LOCAL config; a public repo names no customer or internal codenames.
 FORBIDDEN_OWNERS = (
-    "microsoft",
-    "aibast",
+    "microsoft",   # example large-vendor org; operators add their own private/work orgs locally
 )
 
 # ── Ring 1: the body. THIS organism's own owner. ─────────────────────────────
@@ -186,7 +186,7 @@ def check(candidate, roster=None):
         return Verdict(True, "grail", f"{full} is a grail repo (the kernel of record)")
     if owner in FORBIDDEN_OWNERS:
         return Verdict(True, "forbidden-owner",
-                       f"owner {owner!r} is the work/customer/Microsoft world — never prey")
+                       f"owner {owner!r} is a private/work org this operator excludes — never prey")
 
     # Ring 1 — the body: this organism's own owner, plus the shared canon repos.
     if full and full in (r.lower() for r in CANON_REPOS):

@@ -94,7 +94,7 @@ any actor:
   same mechanically: `foundation.json` locks the brainstem's sha256, and
   `verify_spine.py` invariant I3 reddens if it moves);
 - **the grail repos** (`kody-w/rapp-installer`, `rapp-canary`) and the
-  work/customer world (`microsoft/*`, `aibast`);
+  operator's configured private/work orgs (named only in local config, never here);
 - **the organism's own body** (its estate repos and its own cells);
 - **mimics** — a foreign thing wearing the organism's coat, rejected *because* it
   looks like self.
